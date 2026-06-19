@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack | Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌿 EcoTrack</h1>
+            <p>Understand, track, and reduce your daily carbon footprint.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card input-section">
+            <h2>Log Today's Activities</h2>
+            <form id="carbon-form">
+                <div class="form-group">
+                    <label for="transport">🚗 Transportation (Miles driven in a car):</label>
+                    <input type="number" id="transport" min="0" step="0.1" placeholder="e.g., 15" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="electricity">💡 Electricity (Hours using heavy appliances):</label>
+                    <input type="number" id="electricity" min="0" step="0.1" placeholder="e.g., 4" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="diet">🍔 Diet (Number of meat-based meals today):</label>
+                    <input type="number" id="diet" min="0" step="1" placeholder="e.g., 2" required>
+                </div>
+
+                <button type="submit" class="btn">Calculate My Footprint</button>
+            </form>
+        </section>
+
+        <section class="card results-section" id="results" style="display: none;">
+            <h2>📊 Your Daily Footprint</h2>
+            <div class="score-display">
+                <span id="total-co2">0</span> kg CO₂
+            </div>
+            
+            <div class="insights-box">
+                <h3>💡 Personalized Insights</h3>
+                <p id="insight-text">Analyzing your data...</p>
+                <ul id="action-list" class="action-list">
+                    </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built for Hack2skill PromptWars Challenge 3</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
